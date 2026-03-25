@@ -18,7 +18,7 @@ resource "aws_ssm_parameter" "private_subnet_ids" {
   value = join("," , module.vpc.private_subnet_ids)
 }
 
-resource "aws_ssm_parameter" "database_subnet_group_name" {
+resource "aws_ssm_parameter" "db_subnet_group_name" {
   name  = "/${var.project_name}/${var.environment}/database-subnet-group-name"
   type  = "String"
   value = module.vpc.database_subnet_group_name

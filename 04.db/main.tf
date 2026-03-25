@@ -1,4 +1,4 @@
-module "db" {
+module "database" {
   source = "terraform-aws-modules/rds/aws"
 
   identifier = "${var.project_name}-${var.environment}"
